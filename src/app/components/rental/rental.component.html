@@ -1,0 +1,22 @@
+<table class="table ">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Araba Id</th>
+            <th>MüşteriId</th> 
+            <th>Kiralanan Tarih</th>
+            <th> Teslim Tarihi</th>
+          
+           
+        </tr>
+    </thead>
+    <tr *ngFor="let rental of rentals">
+        <td>{{rental.id}}</td>
+        <td>{{rental.carId}}</td>
+        <td>{{rental.customerId}}</td>
+        <td>{{rental.rentDate}}</td>
+        <td>{{rental.returnDate}}</td>
+     
+
+    </tr>
+</table>
