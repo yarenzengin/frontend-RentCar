@@ -10,6 +10,11 @@ import { ColorComponent } from './components/color/color.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { RentalComponent } from './components/rental/rental.component';
 import { NaviComponent } from './components/navi/navi.component';
+import { CarDetailComponent } from './components/car-detail/car-detail.component';
+
+
+
+
 
 
 @NgModule({
@@ -20,7 +25,12 @@ import { NaviComponent } from './components/navi/navi.component';
     ColorComponent,
     CustomerComponent,
     RentalComponent,
-    NaviComponent
+    NaviComponent,
+    CarDetailComponent
+    
+  
+   
+  
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-<table class="table ">
+<table class="RentCar ">
     <thead>
         <tr>
             <th>Id</th>
@@ -6,6 +6,7 @@
             <th>Renk</th>
             <th>Fiyat</th>
             <th>Açıklama</th>
+            <th>Detay</th>
         </tr>
     </thead>
     <tr *ngFor="let car of cars">
@@ -14,5 +15,8 @@
         <td>{{car.colorId}}</td>
         <td>{{car.dailyPrice}}</td>
         <td>{{car.description}}</td>
+        <td > <a routerLink = "/cars/{{car.carId}}" class="btn btn-info" type="button">  Detaya git </a> 
+       
+      </td>
     </tr>
 </table>
