@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Car } from 'src/app/models/car';
-import { CarDetail } from 'src/app/models/carDetail';
 import { CarImage } from 'src/app/models/carImage';
+import { CarResponseModel } from 'src/app/models/carResponseModel';
 import { CarDetailService } from 'src/app/services/car-detail.service';
 
 @Component({
@@ -11,8 +11,10 @@ import { CarDetailService } from 'src/app/services/car-detail.service';
   styleUrls: ['./car-detail.component.css']
 })
 export class CarDetailComponent implements OnInit {
-car:Car[]=[]
+car:Car
+carResponseModel:CarResponseModel
 carImages:CarImage[]=[]
+
   constructor(private carDetailService:CarDetailService,private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -20,9 +22,10 @@ carImages:CarImage[]=[]
       if (params["carId"]) {
         this.getCarsById(params["carId"])
         this.getImagesByCarId(params["carId"])
+       
       }
     })
-  }
+  } 
 getCarsById(carId:number){
   this.carDetailService.getCarsById(carId).subscribe(response => {
    this.car = response.data

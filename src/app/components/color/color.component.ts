@@ -10,6 +10,7 @@ import { ColorService } from 'src/app/services/color.service';
 export class ColorComponent implements OnInit {
 colors:Color[] = [];
 currentColor:Color={colorId:0,colorName:""}
+filterText:""
   constructor(private colorService:ColorService) { }
 
   ngOnInit(): void {
